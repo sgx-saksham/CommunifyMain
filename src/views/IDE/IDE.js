@@ -1,17 +1,21 @@
 /*eslint-disable*/
 import React from "react";
+import ChartistGraph from "react-chartist";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import Hidden from "@material-ui/core/Hidden";
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
-
+import CardFooter from "components/Card/CardFooter.js";
 import styles from "assets/jss/Communify/views/iconsStyle.js";
 import { Button } from "@material-ui/core";
+// import IntegratedEnvironment from "./../../CompilerComponents/IntegratedEnvironment";
+import { bugs, website, server } from "variables/general.js";
+
+import { compiler } from "variables/charts.js";
 
 const useStyles = makeStyles(styles);
 
@@ -19,63 +23,35 @@ export default function Icons() {
   const classes = useStyles();
   return (
     <div>
-      {/* <GridContainer>
-      <GridItem xs={12} sm={12} md={12}>
-        <Card plain>
-          <CardHeader plain color="primary">
-            <h4 className={classes.cardTitleWhite}>Material Design Icons</h4>
-            <p className={classes.cardCategoryWhite}>
-              Handcrafted by our friends from{" "}
+      <GridItem xs={12} sm={12} md={4}>
+        <Card chart>
+          <CardHeader color="danger">
+            <ChartistGraph
+              className="ct-chart"
+              data={compiler.data}
+              type="Bar"
+              options={compiler.options}
+              responsiveOptions={compiler.responsiveOptions}
+              listener={compiler.animation}
+            />
+          </CardHeader>
+          <CardBody>
+            <h4 className={classes.cardTitle}>Compiler For your Code! </h4>
+            <p className={classes.cardCategory}>
               <a
-                href="https://design.google.com/icons/?ref=creativetime"
-                target="_blank"
+                href={
+                  "https://sgx-saksham.github.io/Communify-compiler/communifyCompiler.html"
+                }
               >
-                Google
-              </a>
-            </p>
-          </CardHeader>
-          <CardBody>
-            <Hidden only={["sm", "xs"]}>
-              <iframe
-                className={classes.iframe}
-                src="https://material.io/icons/"
-                title="Icons iframe"
-              >
-                <p>Your browser does not support iframes.</p>
-              </iframe>
-            </Hidden>
-            <Hidden only={["lg", "md"]}>
-              <GridItem xs={12} sm={12} md={6}>
-                <h5>
-                  The icons are visible on Desktop mode inside an iframe. Since
-                  the iframe is not working on Mobile and Tablets please visit
-                  the icons on their original page on Google. Check the
-                  <a
-                    href="https://design.google.com/icons/?ref=creativetime"
-                    target="_blank"
-                  >
-                    Material Icons
-                  </a>
-                </h5>
-              </GridItem>
-            </Hidden>
-          </CardBody>
-        </Card>
-      </GridItem>
-    </GridContainer> */}
-      <GridItem xs={12} sm={12} md={6}>
-        <Card>
-          <CardHeader color="info">
-            <h4 className={classes.cardTitleWhite}>Groups</h4>
-            <p className={classes.cardCategoryWhite}>Compiler Support</p>
-          </CardHeader>
-          <CardBody>
-            <Button>
-              <a href={"https://communify-compiler.netlify.app/"}>
                 This is to Compile Your Code and Happy Hacking!
               </a>
-            </Button>
+            </p>
           </CardBody>
+          <CardFooter chart>
+            <div className={classes.stats}>
+              Bugs... huh, terminate them on our terminal!{" "}
+            </div>
+          </CardFooter>
         </Card>
       </GridItem>
     </div>

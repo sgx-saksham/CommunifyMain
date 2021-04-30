@@ -73,7 +73,7 @@ export default function Sidebar(props) {
   var brand = (
     <div className={classes.logo}>
       <a
-        href="https://www.linkedin.com/in/saksham-gupta-9573b31a3/"
+        href="https://sgx-saksham.github.io/Communify/"
         className={classNames(classes.logoLink)}
         target="_blank"
       >

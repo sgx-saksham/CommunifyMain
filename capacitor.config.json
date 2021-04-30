@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.Communify",
+    "appName": "Communify",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+  }

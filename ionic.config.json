@@ -1,0 +1,7 @@
+{
+    "name": "Communify",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

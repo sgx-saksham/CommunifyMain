@@ -10,10 +10,12 @@ function App() {
   return (
     <div>
       <Router history={hist}>
-        <Switch>
-          <Route path="/admin" component={Admin} />
-          <Redirect from="/" to="/admin/dashboard" />
-        </Switch>
+        {
+          <Switch>
+            <Route path="/admin" component={Admin} />
+            <Redirect from="/" to="/admin/dashboard" />
+          </Switch>
+        }
       </Router>
     </div>
   );

@@ -122,7 +122,7 @@ export default function AdminNavbarLinks() {
                       onClick={handleCloseNotification}
                       className={classes.dropdownItem}
                     >
-                      Sgx is countering this
+                      Sgx is countering on it
                     </MenuItem>
                     <MenuItem
                       onClick={handleCloseNotification}

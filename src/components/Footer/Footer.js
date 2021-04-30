@@ -18,23 +18,23 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="#Communify" className={classes.block}>
-                Communify
+              <a href="#Docs" className={classes.block}>
+                Docs
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a src="#About" className={classes.block}>
+                About
+              </a>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+              <a href="#Channels" className={classes.block}>
+                Channels
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a href="#Communify" className={classes.block}>
-                Communify
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#Communify" className={classes.block}>
-                Communify
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#Communify" className={classes.block}>
-                Communify
+                Community
               </a>
             </ListItem>
           </List>
@@ -42,11 +42,11 @@ export default function Footer(props) {
         <p className={classes.right}>
           <span>
             <a
-              href="https://www.linkedin.com/in/saksham-gupta-9573b31a3/"
+              href="https://reactjs.org/tutorial/tutorial.html"
               target="_blank"
               className={classes.a}
             >
-              SGX_Saksham is at the code
+              Take the tutorial
             </a>
           </span>
         </p>
